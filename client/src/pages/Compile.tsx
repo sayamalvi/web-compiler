@@ -1,31 +1,18 @@
+import LanguageHeader from "@/components/LanguageHeader"
 import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "../components/ui/resizable"
-
+import CodeEditor from "@/components/CodeEditor"
 const Compile = () => {
   return (
     <ResizablePanelGroup
       direction="horizontal"
-      className="rounded-lg border"
     >
-      <ResizablePanel defaultSize={50}>
-        <div className="flex h-[calc(100dvh-60px)] items-center justify-center p-6">
-          <span className="font-semibold">One</span>
-        </div>
+      <ResizablePanel defaultSize={50} className="h-[calc(100dvh-60px)] min-w-[350px]">
+        <LanguageHeader />
+        <CodeEditor />
       </ResizablePanel>
       <ResizableHandle />
-      <ResizablePanel defaultSize={50}>
-        <ResizablePanelGroup direction="vertical">
-          <ResizablePanel defaultSize={25}>
-            <div className="flex h-full items-center justify-center p-6">
-              <span className="font-semibold">Two</span>
-            </div>
-          </ResizablePanel>
-          <ResizableHandle />
-          <ResizablePanel defaultSize={75}>
-            <div className="flex h-full items-center justify-center p-6">
-              <span className="font-semibold">Three</span>
-            </div>
-          </ResizablePanel>
-        </ResizablePanelGroup>
+      <ResizablePanel defaultSize={50} className=" h-[calc(100dvh-60px)] min-w-[350px] ">
+        <span className="font-semibold">Right</span>
       </ResizablePanel>
     </ResizablePanelGroup>
   )
