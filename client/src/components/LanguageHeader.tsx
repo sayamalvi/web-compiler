@@ -11,14 +11,14 @@ const LanguageHeader = () => {
                 <Button variant='outline' className='flex justify-center items-center gap-1'><Share2Icon size={16} />Share</Button>
             </div>
             <div className='__tab_switcher'>
-                <Select>
-                    <SelectTrigger className='w-[100px] bg-gray-800'>
-                        <SelectValue placeholder="JavaScript"/>
+                <Select defaultValue='html'>
+                    <SelectTrigger className='w-[100px] bg-gray-800 focus:ring-0'>
+                        <SelectValue/>
                     </SelectTrigger>
                     <SelectContent>
-                        <SelectItem value='JavaScript'>JavaScript</SelectItem>
-                        <SelectItem value='HTML'>HTML</SelectItem>
-                        <SelectItem value='CSS'>CSS</SelectItem>
+                        <SelectItem value='javascript'>JavaScript</SelectItem>
+                        <SelectItem value='html'>HTML</SelectItem>
+                        <SelectItem value='css'>CSS</SelectItem>
                     </SelectContent>
                 </Select>
             </div>
